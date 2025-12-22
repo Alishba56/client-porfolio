@@ -43,7 +43,7 @@ const INITIAL_MENU: MenuItem[] = [
     description:
       "Worked as Second Assistant Director, handling coordination, logging, and on-set execution.",
     category: "TV Commercial",
-    image: "/zic.png",
+    image: "/Zic.png",
     links: [
       {
         label: "Bike Reel",
