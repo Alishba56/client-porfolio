@@ -37,7 +37,7 @@ export default function ZICProject() {
       </section>
 
       {/* Project Description */}
-      <section className="max-w-5xl mx-auto p-6 md:p-12">
+      <section className="max-w-5xl mx-auto py-20">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
          My Contribution
 
@@ -50,11 +50,11 @@ export default function ZICProject() {
       
 
       {/* Car Section */}
-      <section className="max-w-5xl mx-auto p-6 md:p-12">
+      <section className="max-w-5xl mx-auto pb-10">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Car DVC</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-          <Image src={carImage1} alt="Car Image 1" className="rounded-lg shadow-lg" />
-          <Image src={carImage2} alt="Car Image 2" className="rounded-lg shadow-lg" />
+        <div className="grid grid-cols-1 md:grid-cols-2  mb-4">
+          <Image src={carImage1} alt="Car Image 1" className="h-[300px] rounded-lg shadow-lg" />
+          <Image src={carImage2} alt="Car Image 2" className="rounded-lg h-[300px] shadow-lg" />
         </div>
         <Link
           href="https://www.instagram.com/reel/DQbf31sAO6p/?igsh=dW11d2h5YTdnYzVj" // Replace with your Car video link
@@ -62,15 +62,15 @@ export default function ZICProject() {
           rel="noopener noreferrer"
           className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
         >
-          Watch Car DVC
+          Watch 
         </Link>
       </section>
       {/* Bike Section */}
-      <section className="max-w-5xl mx-auto p-6 md:p-12">
+      <section className="max-w-5xl mx-auto py-10">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Bike DVC</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-          <Image src={bikeImage1} alt="Bike Image 1" className="rounded-lg shadow-lg" />
-          <Image src={bikeImage2} alt="Bike Image 2" className="rounded-lg shadow-lg" />
+        <div className="grid grid-cols-1 md:grid-cols-2 mb-4">
+          <Image src={bikeImage1} alt="Bike Image 1" className=" h-[300px] rounded-lg shadow-lg" />
+          <Image src={bikeImage2} alt="Bike Image 2" className="h-[300px] rounded-lg shadow-lg" />
         </div>
         <Link
           href="https://www.instagram.com/reel/DRd5mr7idbD/?igsh=MXB5eDY3YXdsODMyOA%3D%3D" // Replace with your Bike video link
@@ -78,16 +78,16 @@ export default function ZICProject() {
           rel="noopener noreferrer"
           className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
         >
-          Watch Bike DVC
+          Watch 
         </Link>
       </section>
 
       {/* Truck Section */}
-      <section className="max-w-5xl mx-auto p-6 md:p-12">
+      <section className="max-w-5xl mx-auto py-10 ">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Truck DVC</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-          <Image src={truckImage1} alt="Truck Image 1" className="rounded-lg shadow-lg" />
-          <Image src={truckImage2} alt="Truck Image 2" className="rounded-lg shadow-lg" />
+        <div className="grid grid-cols-1 md:grid-cols-2 mb-4">
+          <Image src={truckImage1} alt="Truck Image 1" className="rounded-lg h-[300px] shadow-lg" />
+          <Image src={truckImage2} alt="Truck Image 2" className="rounded-lg h-[300px] shadow-lg" />
         </div>
         <Link
           href="https://www.instagram.com/reel/DRl7bCgFRkk/" // Replace with your Truck video link
@@ -95,7 +95,7 @@ export default function ZICProject() {
           rel="noopener noreferrer"
           className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
         >
-          Watch Truck DVC
+          Watch 
         </Link>
       </section>
 

@@ -55,7 +55,7 @@ export default function page() {
           rel="noopener noreferrer"
           className="ml-12 bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
         >
-          Watch TVC
+          Watch 
         </Link>
       </section>
 

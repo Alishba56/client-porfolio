@@ -25,7 +25,7 @@ const INITIAL_MENU: MenuItem[] = [
     name: "Kashmir Waadi Banaspati Cooking Oil",
     description:
       "I worked as an Assistant Producer on the Kashmir Waadi Banaspati Cooking Oil project.",
-    category: "TV Commercial",
+    category: "TVC Project",
     image: "/khasmirbansapati.jpeg",
     // ❌ NO VIDEO → image hi rahegi
     link: "/kashmir",
@@ -35,7 +35,7 @@ const INITIAL_MENU: MenuItem[] = [
     name: "ZIC",
     description:
       "Worked as Second Assistant Director, handling coordination.",
-    category: "TV Commercial",
+    category: "TVC Project",
     image: "/zic.jpeg",
     link: "/zic",
   },
@@ -60,7 +60,7 @@ const INITIAL_MENU: MenuItem[] = [
   },
 ];
 
-const CATEGORIES = ["All", "Filmmaking", "Photography", "TV Commercial"];
+const CATEGORIES = ["All", "Filmmaking", "Photography", "TVC Project"];
 
 export function MenuManager() {
   const [activeCategory, setActiveCategory] = useState("All");
