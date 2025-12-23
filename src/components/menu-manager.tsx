@@ -39,7 +39,7 @@ const INITIAL_MENU: MenuItem[] = [
   },
   {
     id: "2",
-    name: "ZIC DVC",
+    name: "ZIC",
     description:
       "Worked as Second Assistant Director, handling coordination, logging, and on-set execution.",
     category: "TV Commercial",
@@ -59,21 +59,31 @@ const INITIAL_MENU: MenuItem[] = [
       },
     ],
   },
-  {
+{
     id: "3",
-    name: "Eco-Friendly Living Campaign",
+    name: "The Guardian of Karachi: Abdullah Shah Ghazi",
     description:
-      "A dynamic campaign promoting sustainable living through strong visuals.",
+      "A soulful photographic exploration of the iconic shrine, capturing the spiritual essence and architectural beauty of Abdullah Shah Ghazi's resting place.",
     category: "Photography",
-    image: "/makeing.mp4",
+    image: "/abdullah-shah.png",
     links: [
       {
-        label: "View Project",
-        url: "https://example.com",
+        label: "View Site",
+        url: "https://std34267.my.canva.site/",
       },
+    ],
+  },
+{
+    id: "4",
+    name: "Shadows Within",
+    description:
+      "“A conceptual short film exploring identity and repetition. Multiple versions of a single character create a visually striking narrative.”",
+    category: "Filmmaking",
+    image: "/",
+    links: [
       {
-        label: "Gallery",
-        url: "https://example.com/gallery",
+        label: "Watch Film",
+        url: "https://drive.google.com/file/d/14sZKrkkoFjoLtYlbOuA_DPgaVM9SxskR/view",
       },
     ],
   },
