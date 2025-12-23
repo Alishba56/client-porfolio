@@ -39,33 +39,19 @@ export default function ZICProject() {
       {/* Project Description */}
       <section className="max-w-5xl mx-auto p-6 md:p-12">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-          Project Overview
+         My Contribution
+
         </h2>
         <p className="text-gray-700 leading-relaxed text-lg mb-6">
           For this project of ZIC Lubricant, I worked as the Second Assistant Director. During pre-production, I supported the director and first assistant director by gathering references for the shots. On set, I coordinated with the team to manage the execution efficiently. I also handled logging, meticulously noting every perfect take in the logbook. This role allowed me to contribute to both the creative and organizational aspects of the production.
         </p>
       </section>
 
-      {/* Bike Section */}
-      <section className="max-w-5xl mx-auto p-6 md:p-12">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">Bike Shots</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-          <Image src={bikeImage1} alt="Bike Image 1" className="rounded-lg shadow-lg" />
-          <Image src={bikeImage2} alt="Bike Image 2" className="rounded-lg shadow-lg" />
-        </div>
-        <Link
-          href="https://www.instagram.com/reel/DRd5mr7idbD/?igsh=MXB5eDY3YXdsODMyOA%3D%3D" // Replace with your Bike video link
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
-        >
-          Watch Bike Video
-        </Link>
-      </section>
+      
 
       {/* Car Section */}
       <section className="max-w-5xl mx-auto p-6 md:p-12">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">Car Shots</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6">Car DVC</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
           <Image src={carImage1} alt="Car Image 1" className="rounded-lg shadow-lg" />
           <Image src={carImage2} alt="Car Image 2" className="rounded-lg shadow-lg" />
@@ -76,13 +62,29 @@ export default function ZICProject() {
           rel="noopener noreferrer"
           className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
         >
-          Watch Car Video
+          Watch Car DVC
+        </Link>
+      </section>
+      {/* Bike Section */}
+      <section className="max-w-5xl mx-auto p-6 md:p-12">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6">Bike DVC</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+          <Image src={bikeImage1} alt="Bike Image 1" className="rounded-lg shadow-lg" />
+          <Image src={bikeImage2} alt="Bike Image 2" className="rounded-lg shadow-lg" />
+        </div>
+        <Link
+          href="https://www.instagram.com/reel/DRd5mr7idbD/?igsh=MXB5eDY3YXdsODMyOA%3D%3D" // Replace with your Bike video link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
+        >
+          Watch Bike DVC
         </Link>
       </section>
 
       {/* Truck Section */}
       <section className="max-w-5xl mx-auto p-6 md:p-12">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">Truck Shots</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6">Truck DVC</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
           <Image src={truckImage1} alt="Truck Image 1" className="rounded-lg shadow-lg" />
           <Image src={truckImage2} alt="Truck Image 2" className="rounded-lg shadow-lg" />
@@ -93,7 +95,7 @@ export default function ZICProject() {
           rel="noopener noreferrer"
           className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
         >
-          Watch Truck Video
+          Watch Truck DVC
         </Link>
       </section>
 
