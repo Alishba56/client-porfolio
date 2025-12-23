@@ -36,7 +36,7 @@ export default function Hero() {
       className="min-h-screen flex items-center justify-center
       bg-black px-4"
     >
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-20">
+      <div className="max-w-6xl min-h-screen w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-20">
 
         {/* Left Content */}
         <motion.div

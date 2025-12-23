@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react"; // keep this for icon
+import Link from "next/link"; // ✅ correct Link import
 import { Button } from "@/src/components/ui/button";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
@@ -14,10 +15,7 @@ type MenuItem = {
   description: string;
   category: string;
   image: string;
-  links?: {
-    label: string;
-    url: string;
-  }[];
+  link: string; // single string URL
 };
 
 // Initial Data
@@ -29,13 +27,7 @@ const INITIAL_MENU: MenuItem[] = [
       "I worked as an Assistant Producer on the Kashmir Waadi Banaspati Cooking Oil project, representing Stimulus Production House as part of the Stimulus team.",
     category: "TV Commercial",
     image: "/khasmirbansapati.jpeg",
-    links: [
-      {
-        label: "Watch Reel",
-        url: "https://www.instagram.com/reel/DR7J-w9k6Lx/",
-      },
-     
-    ],
+    link: "/khasmir",
   },
   {
     id: "2",
@@ -43,49 +35,26 @@ const INITIAL_MENU: MenuItem[] = [
     description:
       "Worked as Second Assistant Director, handling coordination, logging, and on-set execution.",
     category: "TV Commercial",
-    image: "/Zic.png",
-    links: [
-      {
-        label: "Bike Reel",
-        url: "https://www.instagram.com/reel/DRd5mr7idbD/?igsh=MXB5eDY3YXdsODMyOA%3D%3D",
-      },
-      {
-        label: "Car Reel",
-        url: "https://www.instagram.com/reel/DQbf31sAO6p/?igsh=dW11d2h5YTdnYzVj",
-      },
-      {
-        label: "Truck  Reel",
-        url: "https://www.instagram.com/reel/DRl7bCgFRkk/",
-      },
-    ],
+    image: "/zic.jpeg",
+    link: "/zic", // single detail link
   },
-{
+  {
     id: "3",
     name: "The Guardian of Karachi: Abdullah Shah Ghazi",
     description:
       "A soulful photographic exploration of the iconic shrine, capturing the spiritual essence and architectural beauty of Abdullah Shah Ghazi's resting place.",
     category: "Photography",
     image: "/abdullah-shah.png",
-    links: [
-      {
-        label: "View Site",
-        url: "https://std34267.my.canva.site/",
-      },
-    ],
+    link: "https://std34267.my.canva.site/",
   },
-{
+  {
     id: "4",
     name: "Shadows Within",
     description:
       "“A conceptual short film exploring identity and repetition. Multiple versions of a single character create a visually striking narrative.”",
     category: "Filmmaking",
     image: "/",
-    links: [
-      {
-        label: "Watch Film",
-        url: "https://drive.google.com/file/d/14sZKrkkoFjoLtYlbOuA_DPgaVM9SxskR/view",
-      },
-    ],
+    link: "https://drive.google.com/file/d/14sZKrkkoFjoLtYlbOuA_DPgaVM9SxskR/view",
   },
 ];
 
@@ -123,7 +92,7 @@ export function MenuManager() {
           </div>
         </div>
 
-        {/* Cards */}
+        {/* Project Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <AnimatePresence>
             {filteredItems.map((item) => (
@@ -145,9 +114,7 @@ export function MenuManager() {
                   />
 
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold mb-2">
-                      {item.name}
-                    </h3>
+                    <h3 className="text-xl font-bold mb-2">{item.name}</h3>
 
                     <Badge variant="outline" className="w-fit mb-4">
                       {item.category}
@@ -157,25 +124,20 @@ export function MenuManager() {
                       {item.description}
                     </p>
 
-                    {/* Links */}
-                    <div className="mt-6 flex flex-wrap gap-3">
-                      {item.links?.map((link, index) => (
-                        <a
-                          key={index}
-                          href={link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                    {/* Single Details Button */}
+                    <div className="mt-6">
+                      {item.link && (
+                        <Link href={item.link}>
                           <Button
                             variant="ghost"
                             size="sm"
                             className="flex items-center gap-2"
                           >
-                            {link.label}
+                            Details
                             <ExternalLink className="w-4 h-4" />
                           </Button>
-                        </a>
-                      ))}
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -183,7 +145,6 @@ export function MenuManager() {
             ))}
           </AnimatePresence>
         </div>
-
       </div>
     </section>
   );
