@@ -22,7 +22,7 @@ const About = () => {
               height={500}
               src="/image.jpeg"
               alt="Our Chef"
-              className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[700px]"
+              className="rounded-2xl shadow-2xl relative z-10 w-full object-cover sm:h-[700px] h-[300px]"
             />
           </div>
           <div className="space-y-2">
