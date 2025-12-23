@@ -56,7 +56,37 @@ const INITIAL_MENU: MenuItem[] = [
     category: "Filmmaking",
     image: "/thelast.jpeg",
     // video: "/last-voice.mp4", // ✅
-    link: "https://drive.google.com/file/d/14sZKrkkoFjoLtYlbOuA_DPgaVM9SxskR/view",
+    link: "/the-last-voice",
+  },
+  {
+    id: "5",
+    name: "Cursed",
+    description:
+      "After a long day at work, an office worker stumbles across something unsettling on his way home.",
+    category: "Filmmaking",
+    image: "/Cursedposter.png",
+    // video: "/last-voice.mp4", // ✅
+    link: "/cursed",
+  },
+  {
+    id: "6",
+    name: "Hublot Watch ",
+    description:
+      "As a storyteller, I showcased both sides of the brand sports and luxury appealing to both audiences",
+    category: "Filmmaking",
+    image: "/hob.jpeg",
+    // video: "/last-voice.mp4", // ✅
+    link: "/hublot",
+  },
+  {
+    id: "7",
+    name: "The Last GoodBye",
+    description:
+      "A documentary photo story capturing the final farewell to Sister Jeannine Geuns at St. Patrick’s Cathedral",
+    category: "Photography",
+    image: "",
+    // video: "/last-voice.mp4", // ✅
+    link: "/church",
   },
 ];
 

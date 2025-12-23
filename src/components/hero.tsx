@@ -8,18 +8,15 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const images = [
-  "/yaseen3.jpg",
-  "/yaseen2.jpg",
-  "/yaseen4.jpg",
-  "/yaseen3.jpg",
-  "/yaseen2.jpg",
-  "/yaseen4.jpg",
-  "/yaseen3.jpg",
-  "/yaseen2.jpg",
-  "/yaseen4.jpg",
-  "/yaseen3.jpg",
-  "/yaseen2.jpg",
-  "/yaseen4.jpg",
+  "/cursed2.jpeg",
+  "/hob3.jpeg",
+  "/thelastvoice5.jpeg",
+  "/cursed4.jpeg",
+  "/thelastvoice2.jpeg",
+  "/cursed2.jpeg",
+  "/hob6.jpeg",
+  "/hob4.jpeg",
+ 
 ];
 
 export function Hero() {
@@ -93,11 +90,11 @@ export function Hero() {
               </Button>
             </Link>
 
-            <Link href="/resume.pdf" download>
+            {/* <Link href="/resume.pdf" download>
               <Button size="lg" className="rounded-full bg-black  px-8">
                 CV <Download className="ml-1 w-4 h-4" />
               </Button>
-            </Link>
+            </Link> */}
             
           </div>
         </div>
