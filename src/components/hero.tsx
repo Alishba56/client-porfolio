@@ -35,7 +35,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden pt-20"
+      className="relative  overflow-hidden pt-20"
     >
       {/* ===== Crossfade Background ===== */}
       {images.map((img, i) => (
@@ -60,7 +60,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/40 z-10" />
 
       {/* ===== Content ===== */}
-      <div className="relative z-20 min-h-screen flex items-center justify-center text-center text-white px-4">
+      <div className="relative z-20 h-[500px] flex items-center justify-center text-center text-white px-4">
         <div>
           <motion.h1
             className="text-5xl md:text-7xl font-bold mb-6"
@@ -81,7 +81,7 @@ export function Hero() {
             Professional photography that tells your story.
           </motion.p>
 
-          <div className="flex gap-4 justify-center">
+          {/* <div className="flex gap-4 justify-center">
             <Link href="/portfolio">
               <Button size="lg" className="rounded-full bg-black  px-8">
                 My Work <ArrowRight className="ml-1 w-4 h-4" />
@@ -93,7 +93,7 @@ export function Hero() {
                 CV <Download className="ml-1 w-4 h-4" />
               </Button>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

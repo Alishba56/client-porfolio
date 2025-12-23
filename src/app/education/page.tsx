@@ -1,73 +1,116 @@
-"use client";
+"use client"
 
-import { Footer } from "@/src/components/footer";
-import { Navbar } from "@/src/components/navbar";
-import { motion } from "framer-motion";
-import { School } from "lucide-react";
+import { Footer } from "@/src/components/footer"
+import { Navbar } from "@/src/components/navbar"
+import { motion } from "framer-motion"
+import { School } from "lucide-react"
 
 const educationData = [
   {
     institution: "St Lawrence's High School",
     degree: "Matriculation",
     duration: "2008 – 2019",
-    description: "Completed matriculation with strong academic performance. Engaged in arts and media activities, building early skills in creativity, storytelling, and teamwork.",
+    description:
+      "Completed matriculation with strong academic foundation while actively participating in arts and creative activities that nurtured storytelling and teamwork skills.",
   },
   {
     institution: "St Patrick's College",
     degree: "Intermediate",
     duration: "2020 – 2022",
-    description: "Completed intermediate studies with focus on analytical and communication skills. Participated in creative projects, enhancing problem-solving, collaboration, and initiative.",
+    description:
+      "Focused on communication, analysis, and collaborative projects, strengthening creative thinking and problem-solving abilities.",
   },
   {
     institution: "Institute of Business Management",
     degree: "Bachelor's in Media Studies",
     duration: "2023 – Present",
-    description: "Pursuing Media Studies with emphasis on cinematography and photography. Gained hands-on experience in composition, lighting, post-production, and visual storytelling projects.",
+    description:
+      "Pursuing Media Studies with emphasis on cinematography and photography, gaining hands-on experience in visual storytelling, lighting, and post-production.",
   },
-];
-
+]
 
 export default function EducationPage() {
   return (
-    <div>
-     <Navbar />
-    <div className="bg-gray-50 dark:bg-gray-900 min-h-screen py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid justify-center lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight justify-center flex text-gray-900 dark:text-white sm:text-4xl">Education</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            My academic journey and the qualifications I've earned along the way.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 grid max-w-2xl  grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {educationData.map((edu, index) => (
-            <motion.div
-              key={index}
-              className="flex flex-col items-start justify-between"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="relative w-full">
-                <div className="absolute -inset-1.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                <div className="relative sm:px-7 px-1 py-6 h-[370px] sm:h-[280px]  bg-white dark:bg-gray-800 ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6">
-                  <div className="flex-shrink-0 ">
-                    <School className="h-8 w-8 mb-10 text-indigo-500" />
+    <div className="bg-white text-gray-900 min-h-screen">
+      <Navbar />
+
+      <section className="relative py-28 px-6">
+        <div className="max-w-6xl mx-auto">
+
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-24"
+          >
+            <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
+              Education
+            </h2>
+            <p className="mt-4 text-gray-500 max-w-xl mx-auto">
+              My academic journey shaped through learning, creativity, and media exploration.
+            </p>
+          </motion.div>
+
+          {/* Timeline */}
+          <div className="relative">
+
+            {/* Center Line */}
+            <div className="absolute left-1/2 top-0 h-full w-px bg-gradient-to-b from-gray-300 via-gray-200 to-transparent hidden md:block"></div>
+
+            <div className="space-y-24">
+              {educationData.map((edu, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  className={`relative flex flex-col md:flex-row ${
+                    index % 2 === 0
+                      ? "md:justify-start"
+                      : "md:justify-end"
+                  }`}
+                >
+                  {/* Timeline Dot */}
+                  <div className="absolute left-1/2 -translate-x-1/2 top-6 hidden md:flex">
+                    <div className="h-3.5 w-3.5 rounded-full bg-gray-900"></div>
                   </div>
-                  <div className="space-y-2">
-                    <div className="text-sm text-gray-400">{edu.duration}</div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{edu.institution}</h3>
-                    <p className="text-md font-medium text-indigo-500 dark:text-indigo-400">{edu.degree}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{edu.description}</p>
+
+                  {/* Card */}
+                  <div className="md:w-[45%] relative group">
+                    <div className="relative rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-sm hover:shadow-md transition">
+                      
+                      <div className="flex items-center gap-4 mb-4">
+                        <School className="h-7 w-7 text-gray-700" />
+                        <span className="text-sm text-gray-500">
+                          {edu.duration}
+                        </span>
+                      </div>
+
+                      <h3 className="text-lg font-semibold text-gray-900">
+                        {edu.institution}
+                      </h3>
+
+                      <p className="text-gray-700 font-medium mt-1">
+                        {edu.degree}
+                      </p>
+
+                      <p className="text-sm text-gray-600 mt-4 leading-relaxed">
+                        {edu.description}
+                      </p>
+
+                    </div>
                   </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+                </motion.div>
+              ))}
+            </div>
+
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+
       <Footer />
     </div>
-  );
+  )
 }

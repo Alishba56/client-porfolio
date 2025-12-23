@@ -1,68 +1,120 @@
-import Image from "next/image";
-import { Button } from "@/src/components/ui/button";
-import { Navbar } from "@/src/components/navbar";
-import { Footer } from "@/src/components/footer";
+"use client"
 
+import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
+import profile from "@/public/image.jpeg"
+import { Button } from "./ui/button"
+import Link from "next/link"
+import { Download } from "lucide-react"
 
-const About = () => {
+const jobTitles = [
+  "Media Studies Student",
+  "Creative Thinker",
+  "Digital Storyteller",
+  "Visual Communication",
+  "Content & Media Creator",
+  "Creative Media Enthusiast",
+]
+
+export default function Hero() {
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTitleIndex(
+        (prev) => (prev + 1) % jobTitles.length
+      )
+    }, 2000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
-    <div>
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center
+      bg-black px-4"
+    >
+      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-20">
 
-      <section id="about" className="py-20 mt-20 container mx-auto px-4">
-        <h1 className="text-6xl font-bold justify-center flex mb-10">
-          About Me
-        </h1>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        {/* Left Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center md:text-left"
+        >
+          {/* Name */}
+          <motion.h1
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4
+            text-white tracking-tight"
+          >
+            Yaseen Ali
+          </motion.h1>
+
+          {/* Animated Job Titles */}
+          <div className="h-14 sm:h-16 mb-6 overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.h2
+                key={currentTitleIndex}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.4 }}
+                className="text-xl sm:text-2xl font-medium text-white"
+              >
+                {jobTitles[currentTitleIndex]}
+              </motion.h2>
+            </AnimatePresence>
+          </div>
+
+          {/* Description */}
+          <p className="text-sm sm:text-base text-gray-300 max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed">
+            I am a Media Studies student with a strong passion for digital media,
+            creative storytelling, and visual communication. I enjoy exploring
+            modern media platforms and expressing ideas through meaningful
+            content, design, and creative visuals.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Link href="/resume.pdf" download className="px-6 flex gap-5 py-3 justify-center items-center rounded-full border border-gray-600
+              text-gray-300 hover:border-purple-400 hover:text-purple-400
+              transition font-medium">
+                CV <Download className="ml-1 w-4 h-4" />
+            </Link>
+            <a
+              href="portfolio"
+              className="px-6 py-3 rounded-full border border-gray-600
+              text-gray-300 hover:border-purple-400 hover:text-purple-400
+              transition font-medium"
+            >
+              View Portfolio
+            </a>
+          </div>
+        </motion.div>
+
+        {/* Right Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center"
+        >
           <div className="relative">
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-orange-500/20 rounded-full blur-2xl" />
+            <div className="absolute inset-0 rounded-full bg-purple-500/20 blur-2xl"></div>
             <Image
-              width={500}
-              height={500}
-              src="/image.jpeg"
-              alt="Our Chef"
-              className="rounded-2xl shadow-2xl relative z-10 w-full object-cover sm:h-[700px] h-[300px]"
+              src={profile}
+              alt="Yaseen Ali"
+              priority
+              className="relative rounded-full w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80
+              object-cover border border-gray-700 shadow-2xl"
             />
           </div>
-          <div className="space-y-2">
-            <h2 className="text-4xl font-bold"></h2>
-            <h3 className="font-bold  text-lg leading-relaxed">
-              "I'm Yaseen
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              A filmmaker with a strong interest in direction and
-              cinematography, driven by curiosity and a deep passion for visual
-              storytelling.
-              <br /> I enjoy exploring creative framing, dynamic camera
-              movement, and expressive compositions to capture meaningful
-              moments that enhance narrative impact.
-              <br />
-              My experience includes working on horror short films such as
-              Cursed and The Last Voice, where I experimented with atmosphere,
-              lighting, and suspense to strengthen visual mood and storytelling.
-              <br />
-              I have also worked on a Hublot Watch TVC, showcasing both the
-              sporty and luxurious identity of the brand through polished
-              visuals and clear, impactful storytelling.
-              <br />
-              Alongside filmmaking, I practice photography as a storytelling
-              medium. My project Whispers of Hope documents Abdullah Shah
-              Ghazi’s Mazar, capturing people, rituals, faith, and cultural
-              atmosphere through intimate imagery.
-              <br />
-              In the TV commercial industry, I have worked as a 2nd Assistant
-              Director on a ZIC Motor Oil TVC and as an Assistant Producer on a
-              Kashmir Basmati Waadi TVC, gaining hands-on experience in
-              professional set workflows, teamwork, and production coordination.
-              <br />I am skilled in Adobe Photoshop and Adobe Premiere Pro,
-              which I use for visual design, photo editing, and post-production
-              workflows.{" "}
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+        </motion.div>
 
-export default About;
+      </div>
+    </section>
+  )
+}

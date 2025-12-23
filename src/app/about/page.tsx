@@ -1,15 +1,13 @@
-import Image from "next/image";
-import { Button } from "@/src/components/ui/button";
 import { Navbar } from "@/src/components/navbar";
 import { Footer } from "@/src/components/footer";
+import Image from "next/image";
+import About from "@/src/components/about";
 
-
-const About = () => {
+const AboutPage = () => {
   return (
     <div>
       <Navbar />
-
-      <section id="about" className="py-20 mt-20 container mx-auto px-4">
+  <section id="about" className="py-20 mt-20 container mx-auto px-4">
         <h1 className="text-6xl font-bold justify-center flex mb-10">
           About Me
         </h1>
@@ -62,9 +60,9 @@ const About = () => {
           </div>
         </div>
       </section>
-      <Footer />
+            <Footer />
     </div>
   );
 };
 
-export default About;
+export default AboutPage;
