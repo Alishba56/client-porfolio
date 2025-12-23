@@ -37,7 +37,7 @@ export default function ZICProject() {
       </section>
 
       {/* Project Description */}
-      <section className="max-w-5xl mx-auto py-20">
+      <section className="max-w-5xl mx-auto py-10">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
          My Contribution
 
