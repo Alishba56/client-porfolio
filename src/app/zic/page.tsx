@@ -52,7 +52,7 @@ export default function ZICProject() {
       {/* Car Section */}
       <section className="max-w-5xl mx-auto pb-10">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Car DVC</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2  mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
           <Image src={carImage1} alt="Car Image 1" className="h-[300px] rounded-lg shadow-lg" />
           <Image src={carImage2} alt="Car Image 2" className="rounded-lg h-[300px] shadow-lg" />
         </div>
@@ -68,7 +68,7 @@ export default function ZICProject() {
       {/* Bike Section */}
       <section className="max-w-5xl mx-auto py-10">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Bike DVC</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
           <Image src={bikeImage1} alt="Bike Image 1" className=" h-[300px] rounded-lg shadow-lg" />
           <Image src={bikeImage2} alt="Bike Image 2" className="h-[300px] rounded-lg shadow-lg" />
         </div>
@@ -85,7 +85,7 @@ export default function ZICProject() {
       {/* Truck Section */}
       <section className="max-w-5xl mx-auto py-10 ">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Truck DVC</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
           <Image src={truckImage1} alt="Truck Image 1" className="rounded-lg h-[300px] shadow-lg" />
           <Image src={truckImage2} alt="Truck Image 2" className="rounded-lg h-[300px] shadow-lg" />
         </div>
