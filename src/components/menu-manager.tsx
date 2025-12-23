@@ -22,9 +22,9 @@ type MenuItem = {
 const INITIAL_MENU: MenuItem[] = [
   {
     id: "1",
-    name: "Kashmir Waadi Banaspati Cooking Oil",
+    name: "Kashmir Waadi Banaspati ",
     description:
-      "I worked as an Assistant Producer on the Kashmir Waadi Banaspati Cooking Oil project.",
+      "I worked as an Assistant Producer on the Kashmir Waadi Banaspati .",
     category: "TVC/DVC Projects",
     image: "/khasmirbansapati.jpeg",
     // ❌ NO VIDEO → image hi rahegi
@@ -32,9 +32,9 @@ const INITIAL_MENU: MenuItem[] = [
   },
   {
     id: "2",
-    name: "ZIC",
+    name: " Zic lubricant",
     description:
-      "Worked as Second Assistant Director, handling coordination.",
+      "Worked as Second Assistant Director",
     category: "TVC/DVC Projects",
     image: "/zic.jpeg",
     link: "/zic",

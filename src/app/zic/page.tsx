@@ -37,7 +37,7 @@ export default function ZICProject() {
       </section>
 
       {/* Project Description */}
-      <section className="max-w-5xl mx-auto py-10">
+      <section className="max-w-5xl mx-auto  pt-15">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
          My Contribution
 
@@ -50,7 +50,7 @@ export default function ZICProject() {
       
 
       {/* Car Section */}
-      <section className="max-w-5xl mx-auto pb-10">
+      <section className="max-w-5xl mx-auto pt-5 pb-10">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Car DVC</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
           <Image src={carImage1} alt="Car Image 1" className="h-[300px] rounded-lg shadow-lg" />
