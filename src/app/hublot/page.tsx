@@ -58,9 +58,7 @@ export default function HublotPage() {
             Hublot Watch Commercial
           </h1>
 
-          <p className="text-lg text-muted-foreground max-w-3xl">
-           As a storyteller, I showcased both sides of the brand sports and luxury appealing to both audiences
-          </p>
+          
         </motion.div>
 
         {/* ================= POSTERS ================= */}
@@ -104,20 +102,12 @@ export default function HublotPage() {
           className="max-w-4xl mb-16"
         >
           <h2 className="text-2xl font-semibold mb-4">
-            About the Project
+            LogLine
           </h2>
 
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            <strong>Hublot Watch Commercial – “Stills”</strong> is a
-            visually driven TVC concept that highlights craftsmanship,
-            form, and precision. The project focuses on presenting the
-            watch through minimal composition and elegant framing.
-          </p>
-
           <p className="text-muted-foreground leading-relaxed">
-            Strong lighting, clean visuals, and controlled pacing are
-            used to create a timeless and high-end aesthetic suitable
-            for a luxury brand showcase.
+                     As a storyteller, I showcased both sides of the brand sports and luxury appealing to both audiences
+
           </p>
         </motion.div>
 
@@ -139,8 +129,8 @@ export default function HublotPage() {
                 src={sliderImages[current]}
                 alt="Hublot Still"
                 width={1200}
-                height={800}
-                className="w-full h-[450px] object-contain"
+  height={800}
+  className="w-full h-auto object-contain"
               />
             </motion.div>
           </AnimatePresence>

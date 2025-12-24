@@ -16,9 +16,9 @@ import { Footer } from "@/src/components/footer";
 
 /* 🔥 Slider Images */
 const sliderImages = [
-  "/last-goodbye-still-1.jpg",
-  "/last-goodbye-still-2.jpg",
-  "/last-goodbye-still-3.jpg",
+  "/church.jpeg",
+  "/church2.jpeg",
+  "/church3.jpeg",
 ];
 
 export default function TheLastGoodByePage() {
@@ -63,11 +63,11 @@ export default function TheLastGoodByePage() {
         <div className="grid grid-cols-1 items-center lg:grid-cols-2 gap-10 mb-20">
           <motion.div className="rounded-2xl overflow-hidden shadow-lg bg-black">
             <Image
-              src="/last-goodbye-poster-1.jpg"
+              src="/church1.jpeg"
               alt="The Last GoodBye Poster"
               width={600}
               height={800}
-              className="w-full h-[450px] object-contain"
+              className="w-full h-[450px] "
               priority
             />
           </motion.div>
@@ -137,7 +137,7 @@ export default function TheLastGoodByePage() {
                 alt="The Last GoodBye Still"
                 width={1200}
                 height={800}
-                className="w-full h-[450px] object-contain"
+                className="w-full h-[450px] object-cover"
               />
             </motion.div>
           </AnimatePresence>

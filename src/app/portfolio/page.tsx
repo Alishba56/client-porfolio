@@ -1,52 +1,116 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Footer } from "@/src/components/footer"
-import { MenuManager } from "@/src/components/menu-manager"
-import { Navbar } from "@/src/components/navbar"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import { Footer } from "@/src/components/footer";
+import { MenuManager } from "@/src/components/menu-manager";
+import { Navbar } from "@/src/components/navbar";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+
+/* Animated Titles */
+const titles = [
+  "Filmmaker",
+  "Cinematographer",
+  "Video Editor",
+  "Photographer",
+  "Visual Storyteller",
+];
 
 export default function MenuPage() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % titles.length);
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div>
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      <main className="min-h-screen bg-background text-foreground">
-        <section className="relative h-[40vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      {/* ================= HERO ================= */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/yaseen4.jpg"
+          alt="Portfolio Background"
+          fill
+          className="object-cover scale-105"
+          priority
+        />
 
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/yaseen3.jpg"
-              alt="Portfolio Hero"
-              width={1920}
-              height={1080}
-              className="w-full h-full object-cover"
-              priority
-            />
-          </div>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30" />
 
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-bl from-black via-black/20 to-transparent z-1" />
-
-          {/* Content */}
-  
-  <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="text-5xl text-white md:text-7xl font-bold mb-4 tracking-tighter">
-               Creative <span className="text-white text-primary">Portfolio</span>
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          {/* LEFT CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+          >
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-4">
+              Crafting <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+                Visual Stories
+              </span>
             </h1>
-            <p className="text-xl  text-white text-blacktext-muted-foreground max-w-2xl mx-auto">
-            Explore our diverse collection of projects, from captivating filmmaking to stunning photography.
+
+            {/* Animated Skill Slider */}
+            <div className="h-14 overflow-hidden mb-6">
+              <AnimatePresence mode="wait">
+                <motion.h2
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -40 }}
+                  transition={{ duration: 0.45 }}
+                  className="text-xl md:text-2xl font-semibold tracking-wide text-gray-200"
+                >
+                  {titles[index]}
+                </motion.h2>
+              </AnimatePresence>
+            </div>
+
+            <p className="text-gray-300 max-w-lg leading-relaxed">
+              A curated collection of films, commercials, and photography —
+              blending emotion, composition, and cinematic storytelling.
             </p>
           </motion.div>
-        </div>
-        </section>
 
-        <MenuManager />
-      </main>
+          {/* RIGHT GLASS CARD */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+            className="hidden lg:block"
+          >
+            <div className="backdrop-blur-2xl bg-white/10 border border-white/20 rounded-3xl p-8 shadow-2xl">
+              <h3 className="text-white text-xl font-semibold mb-5">
+                Focus Areas
+              </h3>
+
+              <ul className="space-y-3 text-gray-200 text-sm">
+                <li>🎬 Narrative & Short Films</li>
+                <li>📺 TV Commercials</li>
+                <li>📸 Conceptual Photography</li>
+                <li>🎞 Editing & Post Production</li>
+                <li>🎥 Cinematic Visuals</li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ================= PROJECTS ================= */}
+      <MenuManager />
 
       <Footer />
     </div>
-  )
+  );
 }

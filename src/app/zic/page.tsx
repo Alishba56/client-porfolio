@@ -20,7 +20,7 @@ import Link from "next/link";
 
 export default function ZICProject() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900">
+    <div className="min-h-screen flex flex-col bg-gray-50  text-gray-900">
       <Navbar />
 
       {/* Hero Section with ZIC background */}
@@ -37,7 +37,7 @@ export default function ZICProject() {
       </section>
 
       {/* Project Description */}
-      <section className="max-w-5xl mx-auto  pt-15">
+      <section className="max-w-5xl mx-2  pt-15">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
          My Contribution
 
@@ -50,7 +50,7 @@ export default function ZICProject() {
       
 
       {/* Car Section */}
-      <section className="max-w-5xl mx-auto pt-5 pb-10">
+      <section className="max-w-5xl mx-2 pt-5 pb-10">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Car DVC</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
           <Image src={carImage1} alt="Car Image 1" className="h-[300px] rounded-lg shadow-lg" />
@@ -66,7 +66,7 @@ export default function ZICProject() {
         </Link>
       </section>
       {/* Bike Section */}
-      <section className="max-w-5xl mx-auto py-10">
+      <section className="max-w-5xl mx-2 py-10">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Bike DVC</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
           <Image src={bikeImage1} alt="Bike Image 1" className=" h-[300px] rounded-lg shadow-lg" />
@@ -83,7 +83,7 @@ export default function ZICProject() {
       </section>
 
       {/* Truck Section */}
-      <section className="max-w-5xl mx-auto py-10 ">
+      <section className="max-w-5xl mx-2 py-10 ">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Truck DVC</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
           <Image src={truckImage1} alt="Truck Image 1" className="rounded-lg h-[300px] shadow-lg" />

@@ -61,13 +61,13 @@ export default function TheLastVoicePage() {
 
         {/* ================= POSTERS ================= */}
         <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
-          <motion.div className="rounded-2xl overflow-hidden shadow-lg bg-black">
+          <motion.div className="rounded-2xl sm:w-[400px]  overflow-hidden shadow-lg bg-black">
             <Image
               src="/thelastvoice.jpeg"
               alt="The Last Voice Poster"
-              width={600}
+              width={800}
               height={800}
-              className="w-full h-[500px] object-contain"
+              className="h-[500px] "
               priority
             />
           </motion.div>
@@ -101,28 +101,21 @@ export default function TheLastVoicePage() {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-4xl mb-16"
         >
-          <h2 className="text-2xl font-semibold mb-4">
-            About the Project
+          <h2 className="text-2xl font-bold mb-4">
+        LogLine
           </h2>
 
           <p className="text-muted-foreground leading-relaxed mb-4">
-            <strong>The Last Voice</strong> is a psychological horror
-            short film that explores the unsettling boundary between
-            sound and silence. A music composer begins hearing strange
-            whispers through his headphones late at night.
-          </p>
+            <strong>The Last Voice </strong> Late at night, a music composer hears mysterious whispers through 
+            his headphones and realizes he is not alone in the room,
 
-          <p className="text-muted-foreground leading-relaxed">
-            With minimal dialogue, haunting visuals, and immersive
-            sound design, the film slowly builds tension until silence
-            itself becomes the greatest threat.
           </p>
         </motion.div>
 
         {/* ================= CREDITS ================= */}
       
         {/* ================= IMAGE SLIDER ================= */}
-        <div className="relative max-w-4xl mx-auto mb-20">
+        <div className="relative max-w-4xl object-contain mx-auto mb-20">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
@@ -136,8 +129,8 @@ export default function TheLastVoicePage() {
                 src={sliderImages[current]}
                 alt="Film Still"
                 width={1200}
-                height={800}
-                className="w-full h-[450px] object-contain"
+  height={800}
+  className="w-full h-auto object-contain"
               />
             </motion.div>
           </AnimatePresence>
@@ -165,7 +158,7 @@ export default function TheLastVoicePage() {
             target="_blank"
           >
             <Button size="lg" className="flex items-center gap-2">
-              Watch Full Film
+              Watch 
               <ExternalLink className="w-4 h-4" />
             </Button>
           </Link>

@@ -84,7 +84,7 @@ const INITIAL_MENU: MenuItem[] = [
     description:
       "A documentary photo story capturing the final farewell to Sister Jeannine Geuns at St. Patrick’s Cathedral",
     category: "Photography",
-    image: "",
+    image: "/church1.jpeg",
     // video: "/last-voice.mp4", // ✅
     link: "/church",
   },
@@ -107,7 +107,7 @@ export function MenuManager() {
 
         {/* Categories */}
         <div className="flex justify-center mb-12">
-          <div className="flex gap-1 p-1 bg-gray-200 dark:bg-gray-800 rounded-xl">
+          <div className="flex gap-1  flex-wrap p-1 bg-gray-200 dark:bg-gray-800 rounded-xl">
             {CATEGORIES.map((category) => (
               <button
                 key={category}

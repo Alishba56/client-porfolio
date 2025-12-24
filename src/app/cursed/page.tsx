@@ -37,7 +37,7 @@ export default function CursedPage() {
     <div>
         <Navbar />
     <section className="min-h-screen bg-background text-foreground py-20">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className=" mx-auto px-4 max-w-6xl">
 
         {/* ================= TITLE ================= */}
         <motion.div
@@ -61,14 +61,14 @@ export default function CursedPage() {
         </motion.div>
 
         {/* ================= POSTERS ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
-          <motion.div className="rounded-2xl overflow-hidden shadow-lg bg-black">
+        <div className="grid grid-cols-1  items-center lg:grid-cols-2 gap-10 mb-20">
+          <motion.div className="rounded-2xl sm:w-[500px] overflow-hidden shadow-lg bg-black">
             <Image
               src="/Cursedposter.png"
               alt="Cursed Poster"
-              width={600}
+              width={500}
               height={800}
-              className="w-full h-[450px] object-contain"
+              className="w-full h-[500px] "
               priority
             />
           </motion.div>
@@ -76,7 +76,7 @@ export default function CursedPage() {
          <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-muted/40 rounded-2xl p-8 mb-20"
+          className="rounded-2xl p-8 mb-20"
         >
           <h2 className="text-2xl font-semibold mb-6">
             Credits
@@ -101,7 +101,7 @@ export default function CursedPage() {
           className="max-w-4xl mb-16"
         >
           <h2 className="text-2xl font-semibold mb-4">
-            About the Project
+            LogLine
           </h2>
 
           <p className="text-muted-foreground leading-relaxed mb-4">
@@ -134,9 +134,9 @@ export default function CursedPage() {
               <Image
                 src={sliderImages[current]}
                 alt="Cursed Still"
-                width={1200}
-                height={800}
-                className="w-full h-[450px] object-contain"
+               width={1200}
+  height={800}
+  className="w-full h-auto object-contain"
               />
             </motion.div>
           </AnimatePresence>
