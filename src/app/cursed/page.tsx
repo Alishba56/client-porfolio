@@ -84,7 +84,7 @@ export default function CursedPage() {
 
           <div className="grid grid-cols-1  gap-4 text-sm">
             <p>
-              <strong>Writer / Director / Producer / Cinematographer / Editor:</strong>{" "}
+              <strong>Writer / Director / Producer / Cinematographer / Editor:</strong> <br />{" "}
               Yaseen Ali Abidi
             </p>
             <p><strong>Cast:</strong> Owasi Artani</p>
