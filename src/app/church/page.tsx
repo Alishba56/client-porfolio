@@ -19,6 +19,8 @@ const sliderImages = [
   "/church.jpeg",
   "/church2.jpeg",
   "/church3.jpeg",
+  "/church4.jpeg",
+  "/church5.jpeg",
 ];
 
 export default function TheLastGoodByePage() {
@@ -43,31 +45,28 @@ export default function TheLastGoodByePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-16"
         >
           <Badge variant="outline" className="mb-4">
             Documentary · Photo Story
           </Badge>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl flex justify-center md:text-5xl font-bold ">
             The Last GoodBye
           </h1>
 
-          <p className="text-lg text-muted-foreground max-w-3xl">
-            A documentary photo story capturing the final farewell to
-            Sister Jeannine Geuns at St. Patrick’s Cathedral, Karachi.
-          </p>
+        
         </motion.div>
 
         {/* ================= POSTERS ================= */}
         <div className="grid grid-cols-1 items-center lg:grid-cols-2 gap-10 mb-20">
-          <motion.div className="rounded-2xl overflow-hidden shadow-lg bg-black">
+          <motion.div className=" overflow-hidden  bg-black">
             <Image
               src="/church1.jpeg"
               alt="The Last GoodBye Poster"
               width={600}
               height={800}
-              className="w-full h-[450px] "
+              className="w-full h-[400px] "
               priority
             />
           </motion.div>
@@ -86,8 +85,7 @@ export default function TheLastGoodByePage() {
             <p><strong>Project Type:</strong> Documentary Photo Story</p>
             <p><strong>Location:</strong> St. Patrick’s Cathedral, Karachi</p>
             <p><strong>Date:</strong> 29 March 2025</p>
-            <p><strong>Subject:</strong> Sister Jeannine Geuns</p>
-            <p><strong>Organization:</strong> Marie Adelaide Leprosy Centre (MALC)</p>
+
           </div>
         </motion.div>
         </div>
@@ -130,14 +128,14 @@ export default function TheLastGoodByePage() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.4 }}
-              className="rounded-2xl overflow-hidden shadow-xl bg-black"
+              className=" overflow-hidden shadow-xl bg-black"
             >
               <Image
                 src={sliderImages[current]}
                 alt="The Last GoodBye Still"
-                width={1200}
+                width={1000}
                 height={800}
-                className="w-full h-[450px] object-cover"
+                className="w-full  object-cover"
               />
             </motion.div>
           </AnimatePresence>

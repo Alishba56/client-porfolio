@@ -57,26 +57,35 @@ export default function HublotPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Hublot Watch Commercial
           </h1>
+            <p className="text-muted-foreground leading-relaxed">
+                     As a storyteller, I showcased both sides of the brand sports and luxury appealing to both audiences
+
+          </p>
 
           
         </motion.div>
 
         {/* ================= POSTERS ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
-          <motion.div className="rounded-2xl overflow-hidden shadow-lg bg-black">
-            <Image
-              src="/hob.jpeg"
-              alt="Hublot Poster"
-              width={600}
-              height={800}
-              className="w-full h-[400px] "
-              priority
-            />
-          </motion.div>
- <motion.div
+<div className="flex justify-center items-center mb-20">
+        <motion.div className="flex justify-center items-center bg-black  overflow-hidden">
+  <Image
+    src="/hob.jpeg"
+    alt="Hublot Poster"
+    width={600}
+    height={800}
+    className="max-h-[600px] w-full object-cover"
+    priority
+  />
+</motion.div>
+
+        </div>
+
+    
+        {/* ================= CREDITS ================= */}
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className=" rounded-2xl p-8 mb-"
+          className=" sm:mx-20  p-8 mb-8"
         >
           <h2 className="text-2xl font-semibold mb-6">
             Credits
@@ -93,26 +102,6 @@ export default function HublotPage() {
             <p><strong>Duration:</strong> 1 Minute 18 Seconds</p>
           </div>
         </motion.div>
-        </div>
-
-        {/* ================= DESCRIPTION ================= */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mb-16"
-        >
-          <h2 className="text-2xl font-semibold mb-4">
-            LogLine
-          </h2>
-
-          <p className="text-muted-foreground leading-relaxed">
-                     As a storyteller, I showcased both sides of the brand sports and luxury appealing to both audiences
-
-          </p>
-        </motion.div>
-
-        {/* ================= CREDITS ================= */}
-       
 
         {/* ================= IMAGE SLIDER ================= */}
         <div className="relative max-w-4xl mx-auto mb-20">

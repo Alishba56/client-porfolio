@@ -18,8 +18,13 @@ import { Footer } from "@/src/components/footer";
 /* 🔥 Slider Images */
 const sliderImages = [
   "/thelastvoice2.jpeg",
+  "/thelastvoice3.jpeg",
+  "/thelastvoice4.jpeg",
   "/thelastvoice5.jpeg",
   "/thelastvoice6.jpeg",
+  "/thelastvoice7.jpeg",
+  "/thelastvoice8.jpeg",
+  "/thelastvoice9.jpeg",
 ];
 
 export default function TheLastVoicePage() {
@@ -50,28 +55,58 @@ export default function TheLastVoicePage() {
             Short Film · Horror / Suspense
           </Badge>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl flex justify-center md:text-5xl font-bold mb-4">
             The Last Voice
           </h1>
 
-          <p className="text-lg text-muted-foreground max-w-3xl">
-            When silence speaks, it’s already too late.
-          </p>
         </motion.div>
 
         {/* ================= POSTERS ================= */}
         <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
-          <motion.div className="rounded-2xl sm:w-[400px]  overflow-hidden shadow-lg bg-black">
+          <motion.div className=" sm:w-[450px]  overflow-hidden sm:mx-20 bg-black">
             <Image
-              src="/thelastvoice.jpeg"
+              src="/thelastvoiceposter.PNG"
               alt="The Last Voice Poster"
               width={800}
               height={800}
-              className="h-[500px] "
+              className="h-[550px] "
               priority
             />
           </motion.div>
+          <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className=" rounded-2xl  "
+        >
 
+          <div className="grid grid-cols-1  gap-8 text-sm">
+            <p><strong>Title:</strong>The Last Voice</p>
+            <p><strong>Year:</strong> 2024 </p>
+            <p><strong>Country:</strong>  Pakistan</p>
+            <p><strong>Language:</strong> English </p>
+            <p><strong>Duration:</strong>1 minute 33 sec </p>
+            <p className=""><strong>LOGLINE:</strong><br /> The Last Voice Late at night, a music composer hears mysterious whispers through his headphones and realizes he is not alone in the room.</p>
+          </div>
+        </motion.div>
+
+
+        </div>
+
+        {/* ================= DESCRIPTION ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-4xl mb-16 sm:mx-20 "
+        >
+          {/* <h2 className="text-2xl font-bold mb-4">
+        LogLine
+          </h2>
+
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            <strong>The Last Voice </strong> Late at night, a music composer hears mysterious whispers through 
+            his headphones and realizes he is not alone in the room,
+
+          </p> */}
           <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -93,29 +128,12 @@ export default function TheLastVoicePage() {
           </div>
         </motion.div>
 
-        </div>
-
-        {/* ================= DESCRIPTION ================= */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mb-16"
-        >
-          <h2 className="text-2xl font-bold mb-4">
-        LogLine
-          </h2>
-
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            <strong>The Last Voice </strong> Late at night, a music composer hears mysterious whispers through 
-            his headphones and realizes he is not alone in the room,
-
-          </p>
         </motion.div>
 
         {/* ================= CREDITS ================= */}
       
         {/* ================= IMAGE SLIDER ================= */}
-        <div className="relative max-w-4xl object-contain mx-auto mb-20">
+        <div className="relative max-w-5xl object-contain mx-auto mb-20">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}

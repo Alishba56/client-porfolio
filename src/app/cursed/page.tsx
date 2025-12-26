@@ -16,10 +16,13 @@ import { Footer } from "@/src/components/footer";
 
 /* 🔥 Slider Images (stills) */
 const sliderImages = [
+ 
   "/cursed.jpeg",
   "/cursed2.jpeg",
   "/cursed3.jpeg",
   "/cursed4.jpeg",
+
+
 ];
 
 export default function CursedPage() {
@@ -44,39 +47,64 @@ export default function CursedPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-12 "
         >
           <Badge variant="outline" className="mb-4">
             Short Film · Horror / Suspense
           </Badge>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl flex justify-center  font-bold mb-4">
             Cursed
           </h1>
 
-          <p className="text-lg text-muted-foreground max-w-3xl">
+          {/* <p className="text-lg text-muted-foreground max-w-3xl">
             After a long day at work, an office worker stumbles across
             something unsettling on his way home.
-          </p>
+          </p> */}
         </motion.div>
 
         {/* ================= POSTERS ================= */}
         <div className="grid grid-cols-1  items-center lg:grid-cols-2 gap-10 mb-20">
-          <motion.div className="rounded-2xl sm:w-[500px] overflow-hidden shadow-lg bg-black">
+          <motion.div className=" sm:w-[450px] sm:mx-20 overflow-hidden  bg-black">
             <Image
               src="/Cursedposter.png"
               alt="Cursed Poster"
               width={500}
               height={800}
-              className="w-full h-[500px] "
+              className="w-full h-[550px] "
               priority
             />
           </motion.div>
-
-         <motion.div
+              <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="rounded-2xl p-8 mb-20"
+          className=" rounded-2xl  "
+        >
+
+          <div className="grid grid-cols-1  gap-8 text-sm">
+            <p><strong>Title:</strong>Title:</p>
+            <p><strong>Year:</strong> 2024 </p>
+            <p><strong>Country:</strong>  Pakistan</p>
+            <p><strong>Language:</strong> English </p>
+            <p><strong>Duration:</strong>58 sec </p>
+            <p className=""><strong>LOGLINE:</strong><br /> After a long day at work, an office worker stumbles across something unsettling on his way home</p>
+          </div>
+        </motion.div>
+
+
+        
+        </div>
+
+        {/* ================= DESCRIPTION ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className=" sm:mx-20 mb-16"
+        >
+           <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className=" p-8 mb-20"
         >
           <h2 className="text-2xl font-semibold mb-6">
             Credits
@@ -84,38 +112,14 @@ export default function CursedPage() {
 
           <div className="grid grid-cols-1  gap-4 text-sm">
             <p>
-              <strong>Writer / Director / Producer / Cinematographer / Editor:</strong> <br />{" "}
-              Yaseen Ali Abidi
+              <strong>Writer / Director / Producer / Cinematographer / Editor:</strong> <br />
+               Yaseen Ali Abidi
             </p>
             <p><strong>Cast:</strong> Owasi Artani</p>
             <p><strong>Genre:</strong> Horror / Suspense</p>
             <p><strong>Duration:</strong> 58 seconds</p>
           </div>
         </motion.div>
-        </div>
-
-        {/* ================= DESCRIPTION ================= */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mb-16"
-        >
-          <h2 className="text-2xl font-semibold mb-4">
-            LogLine
-          </h2>
-
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            <strong>Cursed</strong> is a short horror–suspense film that
-            explores fear hidden within everyday routines. What begins
-            as a normal walk home slowly transforms into a disturbing
-            encounter.
-          </p>
-
-          <p className="text-muted-foreground leading-relaxed">
-            The film relies on atmosphere, silence, and minimal visuals
-            to create tension, leaving the audience uneasy long after
-            it ends.
-          </p>
         </motion.div>
 
     

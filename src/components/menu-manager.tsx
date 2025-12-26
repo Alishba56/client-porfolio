@@ -24,7 +24,7 @@ const INITIAL_MENU: MenuItem[] = [
     id: "1",
     name: "Kashmir Waadi Banaspati ",
     description:
-      "I worked as an Assistant Producer on the Kashmir Waadi Banaspati .",
+      "worked as an Assistant Producer .",
     category: "TVC/DVC Projects",
     image: "/khasmirbansapati.jpeg",
     // ❌ NO VIDEO → image hi rahegi
@@ -41,7 +41,7 @@ const INITIAL_MENU: MenuItem[] = [
   },
   {
     id: "3",
-    name: "Abdullah Shah Ghazi",
+    name: "Whispers of Hope - Abdullah Shah Ghazi",
     description:
       "A soulful photographic exploration of the iconic shrine.",
     category: "Photography",
