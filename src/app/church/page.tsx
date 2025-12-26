@@ -80,7 +80,7 @@ export default function TheLastGoodByePage() {
             Credits
           </h2>
 
-          <div className="grid grid-cols-1 gap-4 text-sm">
+          <div className="grid grid-cols-1 gap-8 text-sm">
             <p><strong>Photographer:</strong> Yaseen Ali</p>
             <p><strong>Project Type:</strong> Documentary Photo Story</p>
             <p><strong>Location:</strong> St. Patrick’s Cathedral, Karachi</p>
