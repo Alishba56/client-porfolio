@@ -22,19 +22,16 @@ type MenuItem = {
 const INITIAL_MENU: MenuItem[] = [
   {
     id: "1",
-    name: "Kashmir Waadi Banaspati ",
-    description:
-      "worked as an Assistant Producer .",
+    name: "Kashmir Waadi Banaspati",
+    description: "Worked as an Assistant Producer.",
     category: "TVC/DVC Projects",
     image: "/khasmirbansapati.jpeg",
-    // ❌ NO VIDEO → image hi rahegi
     link: "/kashmir",
   },
   {
     id: "2",
-    name: " Zic lubricant",
-    description:
-      "Worked as Second Assistant Director",
+    name: "Zic lubricant",
+    description: "Worked as Second Assistant Director",
     category: "TVC/DVC Projects",
     image: "/zic.jpeg",
     link: "/zic",
@@ -42,8 +39,7 @@ const INITIAL_MENU: MenuItem[] = [
   {
     id: "3",
     name: "Whispers of Hope - Abdullah Shah Ghazi",
-    description:
-      "A soulful photographic exploration of the iconic shrine.",
+    description: "A soulful photographic exploration of the iconic shrine.",
     category: "Photography",
     image: "/abdullah-shah.png",
     link: "https://std34267.my.canva.site/",
@@ -52,10 +48,9 @@ const INITIAL_MENU: MenuItem[] = [
     id: "4",
     name: "The Last Voice",
     description:
-      "for last voice \"Late at night, a music composer hears mysterious whispers through his headphones and realizes he is not alone in the room\"",
+      'For "The Last Voice": Late at night, a music composer hears mysterious whispers through his headphones and realizes he is not alone in the room.',
     category: "Filmmaking",
     image: "/thelast.jpeg",
-    // video: "/last-voice.mp4", // ✅
     link: "/the-last-voice",
   },
   {
@@ -65,27 +60,24 @@ const INITIAL_MENU: MenuItem[] = [
       "After a long day at work, an office worker stumbles across something unsettling on his way home.",
     category: "Filmmaking",
     image: "/Cursedposter.png",
-    // video: "/last-voice.mp4", // ✅
     link: "/cursed",
   },
   {
     id: "6",
-    name: "Hublot Watch ",
+    name: "Hublot Watch",
     description:
-      "As a storyteller, I showcased both sides of the brand sports and luxury appealing to both audiences",
+      "As a storyteller, I showcased both sides of the brand: sports and luxury appealing to both audiences.",
     category: "Filmmaking",
     image: "/hob.jpeg",
-    // video: "/last-voice.mp4", // ✅
     link: "/hublot",
   },
   {
     id: "7",
     name: "The Last GoodBye",
     description:
-      "A documentary photo story capturing the final farewell to Sister Jeannine Geuns at St. Patrick’s Cathedral",
+      "A documentary photo story capturing the final farewell",
     category: "Photography",
     image: "/church1.jpeg",
-    // video: "/last-voice.mp4", // ✅
     link: "/church",
   },
 ];
@@ -107,7 +99,7 @@ export function MenuManager() {
 
         {/* Categories */}
         <div className="flex justify-center mb-12">
-          <div className="flex gap-1  flex-wrap p-1 bg-gray-200 dark:bg-gray-800 rounded-xl">
+          <div className="flex gap-1 flex-wrap p-1 bg-gray-200 dark:bg-gray-800 rounded-xl">
             {CATEGORIES.map((category) => (
               <button
                 key={category}
@@ -139,7 +131,7 @@ export function MenuManager() {
                 onMouseLeave={() => setHoveredId(null)}
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden"
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col h-full"
               >
                 {/* Image / Video */}
                 <div className="relative h-56 overflow-hidden">
@@ -171,22 +163,24 @@ export function MenuManager() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 flex flex-col">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold mb-2">{item.name}</h3>
 
                   <Badge variant="outline" className="w-fit mb-4">
                     {item.category}
                   </Badge>
 
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 flex-grow">
                     {item.description}
                   </p>
 
-                  <Link href={item.link}>
-                    <Button variant="ghost" size="sm" className="flex gap-2">
-                      Details <ExternalLink className="w-4 h-4" />
-                    </Button>
-                  </Link>
+                  <div className="mt-auto">
+                    <Link href={item.link}>
+                      <Button variant="ghost" size="sm" className="flex gap-2">
+                        Details <ExternalLink className="w-4 h-4" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             );
