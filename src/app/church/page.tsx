@@ -66,7 +66,7 @@ export default function TheLastGoodByePage() {
               alt="The Last GoodBye Poster"
               width={600}
               height={800}
-              className="w-full h-[400px] "
+              className="w-full "
               priority
             />
           </motion.div>
