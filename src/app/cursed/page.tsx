@@ -17,7 +17,7 @@ import { Footer } from "@/src/components/footer";
 /* 🔥 Slider Images (stills) */
 const sliderImages = [
  
-  "/cursed.jpeg",
+  "/Cursed.jpeg",
   "/cursed2.jpeg",
   "/cursed3.jpeg",
   "/cursed4.jpeg",
