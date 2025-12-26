@@ -50,9 +50,10 @@ const INITIAL_MENU: MenuItem[] = [
     description:
       'For "The Last Voice": Late at night, a music composer hears mysterious whispers through his headphones and realizes he is not alone in the room.',
     category: "Filmmaking",
-    image: "/thelast.jpeg",
+    image: "/thelastvoiceposter.PNG",
     link: "/the-last-voice",
   },
+
   {
     id: "5",
     name: "Cursed",
